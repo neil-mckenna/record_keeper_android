@@ -12,9 +12,9 @@
     <string name="full_marathon">42km</string>
     <string name="cycling_image_alt_desc">Cycling Image</string>
     <string name="cycling_text">Cycling</string>
-    <string name="longest_ride">Longest Ride</string>
-    <string name="biggest_climb">Biggest Climb</string>
-    <string name="best_average_speed">Best Average Speed</string>
+    <string name="longest_ride">Longest \nRide</string>
+    <string name="biggest_climb">Biggest \nClimb</string>
+    <string name="best_average_speed">Best Average \nSpeed</string>
     <string name="runnable_record_text">meh meh</string>
     <string name="reset_running_records">Reset Running Records</string>
     <string name="reset_cycling_records">Reset Cycling Records</string>
