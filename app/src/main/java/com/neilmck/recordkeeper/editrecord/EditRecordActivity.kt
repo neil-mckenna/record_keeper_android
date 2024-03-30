@@ -3,6 +3,7 @@ package com.neilmck.recordkeeper.editrecord
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -52,6 +53,17 @@ class EditRecordActivity : AppCompatActivity() {
     private fun setupUI() {
         title = "Title: ${screenData.record}"
         arb.textInputRecord.hint = screenData.recordFieldHint
+        // debug toast
+        /*Toast.makeText(this,
+            "${screenData.record} / ${screenData.recordFieldHint} / ${screenData.sharedPrefsName}",
+            Toast.LENGTH_LONG).show()
+        */
+
+        // added this feature for better user experience, running get a time, cycling get a a text field
+        when(screenData.sharedPrefsName) {
+            "cycling" -> { arb.editTextRecord.setInputType(InputType.TYPE_CLASS_TEXT) }
+            else -> { arb.editTextRecord.setInputType(InputType.TYPE_CLASS_DATETIME)}
+        }
 
         arb.buttonSave.setOnClickListener {
             saveRecord()
@@ -104,7 +116,7 @@ class EditRecordActivity : AppCompatActivity() {
     companion object {
         const val SCREEN_DATA: String = "screen_data"
         const val SHARED_PREFERENCE_RECORD_KEY  = "record"
-        const val SHARED_PREFERENCE_DATE_KEY  = "record"
+        const val SHARED_PREFERENCE_DATE_KEY  = "date"
     }
 
 }

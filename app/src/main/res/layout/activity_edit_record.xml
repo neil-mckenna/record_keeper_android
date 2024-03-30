@@ -46,7 +46,9 @@
             android:id="@+id/edit_text_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="5th January 2023">
+            tools:text="5th January 2023"
+            android:inputType="date"
+            >
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
